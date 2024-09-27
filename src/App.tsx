@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TaskList from './components/TaskList';
+import AddTaskForm from './components/AddTaskForm';
+import Filter from './components/Filter';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-8">
+          <h1 className="text-center mb-4">Task Manager</h1>
+          <div className="card">
+            <div className="card-body">
+              <AddTaskForm />
+              <Filter />
+              <TaskList />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
